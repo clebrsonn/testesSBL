@@ -1,0 +1,942 @@
+<SiebelMessage
+ MessageId=""
+ MessageType="Integration Object"
+ IntObjectName="DevOps Repository Business Service">
+<ListOfDevopsRepositoryBusinessService>
+<DevopsRepositoryBusinessService>
+<Created>07/14/2009 15:23:21</Created>
+<Updated>01/06/2017 09:45:26</Updated>
+<ConflictId>0</ConflictId>
+<Cache>N</Cache>
+<Changed></Changed>
+<Class>CSSService</Class>
+<Comments></Comments>
+<DisplayName></DisplayName>
+<Hidden>N</Hidden>
+<Inactive>N</Inactive>
+<Name>PCS Contas Desbloqueio Confianca</Name>
+<ProjectLocked>N</ProjectLocked>
+<ProjectName>PCS ICS Interface</ProjectName>
+<RepositoryName>Siebel Repository</RepositoryName>
+<SalesApplicationUse></SalesApplicationUse>
+<ServerEnabled>N</ServerEnabled>
+<ServiceApplicationUse></ServiceApplicationUse>
+<ToolsApplicationUse></ToolsApplicationUse>
+<ListOfDevopsRepositoryBusinessServiceMethod>
+<DevopsRepositoryBusinessServiceMethod>
+<Created>07/14/2009 15:24:58</Created>
+<Updated>08/20/2009 13:17:07</Updated>
+<ConflictId>0</ConflictId>
+<Changed></Changed>
+<Comments></Comments>
+<DisplayName>Executa</DisplayName>
+<Hidden>N</Hidden>
+<Inactive>N</Inactive>
+<Name>Executa</Name>
+<ParentInactive>N</ParentInactive>
+<ParentName>PCS Contas Desbloqueio Confianca</ParentName>
+<ProjectLocked>N</ProjectLocked>
+<ProjectName>PCS ICS Interface</ProjectName>
+<RepositoryName>Siebel Repository</RepositoryName>
+<ListOfDevopsRepositoryBusinessServiceMethodArg>
+<DevopsRepositoryBusinessServiceMethodArg>
+<Created>07/16/2009 16:50:46</Created>
+<Updated>07/16/2009 16:50:46</Updated>
+<ConflictId>0</ConflictId>
+<Changed></Changed>
+<Comments></Comments>
+<DataType>String</DataType>
+<DisplayName>Error Code</DisplayName>
+<GParentInactive>N</GParentInactive>
+<GParentName>PCS Contas Desbloqueio Confianca</GParentName>
+<Hidden>N</Hidden>
+<Inactive>N</Inactive>
+<Name>Error Code</Name>
+<Optional>N</Optional>
+<ParentInactive>N</ParentInactive>
+<ParentName>Executa</ParentName>
+<PickApplet></PickApplet>
+<PickField></PickField>
+<PickListBuscompName></PickListBuscompName>
+<Picklist></Picklist>
+<ProjectLocked>N</ProjectLocked>
+<ProjectName>PCS ICS Interface</ProjectName>
+<RepositoryName>Siebel Repository</RepositoryName>
+<StorageType>Property</StorageType>
+<Type>Output</Type>
+</DevopsRepositoryBusinessServiceMethodArg>
+<DevopsRepositoryBusinessServiceMethodArg>
+<Created>07/16/2009 16:50:31</Created>
+<Updated>07/16/2009 16:50:31</Updated>
+<ConflictId>0</ConflictId>
+<Changed></Changed>
+<Comments></Comments>
+<DataType>String</DataType>
+<DisplayName>Error Message</DisplayName>
+<GParentInactive>N</GParentInactive>
+<GParentName>PCS Contas Desbloqueio Confianca</GParentName>
+<Hidden>N</Hidden>
+<Inactive>N</Inactive>
+<Name>Error Message</Name>
+<Optional>N</Optional>
+<ParentInactive>N</ParentInactive>
+<ParentName>Executa</ParentName>
+<PickApplet></PickApplet>
+<PickField></PickField>
+<PickListBuscompName></PickListBuscompName>
+<Picklist></Picklist>
+<ProjectLocked>N</ProjectLocked>
+<ProjectName>PCS ICS Interface</ProjectName>
+<RepositoryName>Siebel Repository</RepositoryName>
+<StorageType>Property</StorageType>
+<Type>Output</Type>
+</DevopsRepositoryBusinessServiceMethodArg>
+</ListOfDevopsRepositoryBusinessServiceMethodArg>
+</DevopsRepositoryBusinessServiceMethod>
+</ListOfDevopsRepositoryBusinessServiceMethod>
+<ListOfDevopsRepositoryBusinessServiceScript>
+<DevopsRepositoryBusinessServiceScript>
+<Created>07/14/2009 15:36:24</Created>
+<Updated>01/06/2017 09:45:26</Updated>
+<ConflictId>0</ConflictId>
+<Changed></Changed>
+<Comments></Comments>
+<Inactive>N</Inactive>
+<Name>(declarations)</Name>
+<ParentInactive>N</ParentInactive>
+<ParentName>PCS Contas Desbloqueio Confianca</ParentName>
+<ProgramLanguage>SBL</ProgramLanguage>
+<ProjectLocked>N</ProjectLocked>
+<ProjectName>PCS ICS Interface</ProjectName>
+<RepositoryName>Siebel Repository</RepositoryName>
+<SalesApplicationUse></SalesApplicationUse>
+<Script>Declare Sub PCS_Processar(oInputs As PropertySet, oOutputs As PropertySet)
+Declare Sub PCS_Chama_Wf(sIdMeio As String, pOutputs As PropertySet)
+Declare Sub PCS_Marca_conta(sIdInvoice As String, pStatus as String)
+Declare Sub PCS_Cria_Controle(sIdInvoice As String, pErroMovel as String, pErroFixo as String, pErroTV as String, pReExec as String)
+Declare Sub subInterfaceTV(Inputs As PropertySet, Outputs As PropertySet,sIdSHB As String, sIdInvoice as String , iContador as Integer, iQteMaxRes as Integer)</Script>
+<Sequence>1</Sequence>
+<ServiceApplicationUse></ServiceApplicationUse>
+<ToolsApplicationUse></ToolsApplicationUse>
+</DevopsRepositoryBusinessServiceScript>
+<DevopsRepositoryBusinessServiceScript>
+<Created>07/14/2009 15:36:51</Created>
+<Updated>07/16/2009 14:25:11</Updated>
+<ConflictId>0</ConflictId>
+<Changed></Changed>
+<Comments></Comments>
+<Inactive>N</Inactive>
+<Name>PCS_Chama_Wf</Name>
+<ParentInactive>N</ParentInactive>
+<ParentName>PCS Contas Desbloqueio Confianca</ParentName>
+<ProgramLanguage>SBL</ProgramLanguage>
+<ProjectLocked>N</ProjectLocked>
+<ProjectName>PCS ICS Interface</ProjectName>
+<RepositoryName>Siebel Repository</RepositoryName>
+<SalesApplicationUse></SalesApplicationUse>
+<Script>Sub PCS_Chama_Wf(sIdMeio As String, pOutputs As PropertySet)
+
+  Dim svc     As Service
+  Dim Inputs As PropertySet
+			
+  Set Inputs  = TheApplication.NewPropertySet()			
+				
+  set svc = TheApplication.GetService(&quot;Workflow Process Manager&quot;)
+
+  Inputs.SetProperty &quot;ProcessName&quot;, &quot;PCS_Provisiona_OS_Desbloqueio_Confianca&quot;
+
+  Inputs.SetProperty &quot;Object Id&quot;, sIdMeio
+
+  svc.InvokeMethod &quot;RunProcess&quot;, Inputs, pOutputs 
+
+
+  Set Inputs  = Nothing
+  Set Outputs  = Nothing
+  set svc = Nothing
+
+End Sub</Script>
+<Sequence>2</Sequence>
+<ServiceApplicationUse></ServiceApplicationUse>
+<ToolsApplicationUse></ToolsApplicationUse>
+</DevopsRepositoryBusinessServiceScript>
+<DevopsRepositoryBusinessServiceScript>
+<Created>01/24/2012 10:39:05</Created>
+<Updated>12/12/2012 15:21:05</Updated>
+<ConflictId>0</ConflictId>
+<Changed></Changed>
+<Comments></Comments>
+<Inactive>N</Inactive>
+<Name>PCS_Cria_Controle</Name>
+<ParentInactive>N</ParentInactive>
+<ParentName>PCS Contas Desbloqueio Confianca</ParentName>
+<ProgramLanguage>SBL</ProgramLanguage>
+<ProjectLocked>N</ProjectLocked>
+<ProjectName>PCS ICS Interface</ProjectName>
+<RepositoryName>Siebel Repository</RepositoryName>
+<SalesApplicationUse></SalesApplicationUse>
+<Script>Sub PCS_Cria_Controle(sIdInvoice As String, pErroMovel as String, pErroFixo as String, pErroTV as String, pReExec as String)
+
+theapplication.trace &quot;PCS_Cria_Controle - inicio: &quot; + pErroMovel +&quot;;&quot;+ pErroFixo +&quot;;&quot;+ pErroTV
+
+	Dim oBO As BusObject
+	Dim oBC As BusComp
+
+	&apos;** joga para fila para processamento batch
+	Set oBO = TheApplication.GetBusObject(&quot;PCS Requisicao EAI&quot;)
+	Set oBC = oBO.GetBusComp(&quot;PCS Requisicao EAI&quot;)
+		
+	With oBC
+		.ClearToQuery
+		.ActivateField &quot;PCS Status&quot;
+		.ActivateField &quot;PCS Origem Solicitacao&quot;
+		.ActivateField &quot;PCS Chave Requisicao&quot;
+		.ActivateField &quot;PCS Recebimento Requisicao&quot;
+		.ActivateField &quot;PCS Origem Id&quot;
+		.ActivateField &quot;PCS Descricao&quot; 	&apos;** ERRO FIXO
+		.ActivateField &quot;PCS Evento&quot;		&apos;** ERRO MOVEL
+		.ActivateField &quot;PCS Envio Requisicao&quot; &apos;** ERRO TV
+			
+		.SetSearchSpec &quot;PCS Origem Solicitacao&quot;, &quot;PCS_DESBL_CONF_BATCH&quot;
+		.SetSearchSpec &quot;PCS Status&quot;, &quot;PendenteDesblCont&quot;
+		.SetSearchSpec &quot;PCS Chave Requisicao&quot;, sIdInvoice
+		.ExecuteQuery
+		
+theapplication.trace &quot;PCS_Cria_Controle - 0&quot;
+		If .FirstRecord = 0 then
+theapplication.trace &quot;PCS_Cria_Controle - 1&quot;
+			If pErroFixo = &quot;Y&quot; or pErroMovel = &quot;Y&quot; or pErroTV = &quot;Y&quot; then
+theapplication.trace &quot;PCS_Cria_Controle - 2&quot;
+				.NewRecord NewBefore
+				.SetFieldValue &quot;PCS Status&quot;, &quot;PendenteDesblCont&quot;
+				.SetFieldValue &quot;PCS Origem Solicitacao&quot;, &quot;PCS_DESBL_CONF_BATCH&quot;
+				.SetFieldValue &quot;PCS Chave Requisicao&quot;, sIdInvoice
+				.SetFieldValue &quot;PCS Recebimento Requisicao&quot;, Trim(Environ$(&quot;COMPUTERNAME&quot;))
+				.SetFieldValue &quot;PCS Descricao&quot;, pErroFixo
+				.SetFieldValue &quot;PCS Evento&quot;, pErroMovel 
+				.SetFieldValue &quot;PCS Envio Requisicao&quot;, pErroTV 
+				.SetFieldValue &quot;PCS Origem Id&quot;, &quot;1&quot;
+				.WriteRecord
+			End If
+		Else
+theapplication.trace &quot;PCS_Cria_Controle - 3&quot;
+			If pErroFixo &lt;&gt; &quot;Y&quot; and pErroMovel &lt;&gt; &quot;Y&quot; and pErroTV &lt;&gt; &quot;Y&quot; then
+theapplication.trace &quot;PCS_Cria_Controle - 4&quot;
+				.SetFieldValue &quot;PCS Status&quot;, &quot;Executado&quot;
+			End If
+theapplication.trace &quot;PCS_Cria_Controle - 5&quot;
+			.SetFieldValue &quot;PCS Recebimento Requisicao&quot;, Trim(Environ$(&quot;COMPUTERNAME&quot;))
+			.SetFieldValue &quot;PCS Descricao&quot;, pErroFixo
+			.SetFieldValue &quot;PCS Evento&quot;, pErroMovel 
+			.SetFieldValue &quot;PCS Envio Requisicao&quot;, pErroTV 
+			.SetFieldValue &quot;PCS Origem Id&quot;, Int(.GetFieldValue(&quot;PCS Origem Id&quot;)) + 1
+			.WriteRecord
+		End If
+	End With
+
+	If pReExec = &quot;Y&quot; and pErroFixo &lt;&gt; &quot;Y&quot; and pErroMovel &lt;&gt; &quot;Y&quot; and pErroTV &lt;&gt; &quot;Y&quot; then
+
+theapplication.trace &quot;PCS_Cria_Controle - 6&quot;
+		Dim oBOSolicitacao		As	BusObject
+		Dim oBCSolicitacao		As	BusComp
+		
+		Set oBOSolicitacao	=	TheApplication.GetBusObject(&quot;PCS Account - Workflow&quot;)
+		Set oBCSolicitacao	=	oBOSolicitacao.GetBusComp(&quot;PCS CUT Billing Transaction Only To Insert&quot;)
+
+		With oBCSolicitacao
+			.SetViewMode AllView
+			.ActivateField &quot;PCS Tipo Solicitacao&quot;
+			.ClearToQuery
+			.SetSearchSpec &quot;PCS Tipo Solicitacao&quot;, &quot;Desbloqueio - Aberto&quot;
+			.SetSearchSpec &quot;Account Id&quot;, sIdInvoice
+			.ExecuteQuery ForwardOnly
+			If .FirstRecord &lt;&gt; 0 Then
+theapplication.trace &quot;PCS_Cria_Controle - 7&quot;
+				.SetFieldValue &quot;PCS Tipo Solicitacao&quot;, &quot;Desbloqueio - Fechado&quot;
+				.WriteRecord
+			End If
+							
+		End With
+
+		Set oBCSolicitacao	=	Nothing
+		Set oBOSolicitacao	=	Nothing
+
+	End If
+
+Set oBC = Nothing
+Set oBO = Nothing
+theapplication.trace &quot;PCS_Cria_Controle - fim&quot;
+
+End Sub</Script>
+<Sequence>3</Sequence>
+<ServiceApplicationUse></ServiceApplicationUse>
+<ToolsApplicationUse></ToolsApplicationUse>
+</DevopsRepositoryBusinessServiceScript>
+<DevopsRepositoryBusinessServiceScript>
+<Created>07/14/2009 16:43:13</Created>
+<Updated>07/15/2013 18:39:17</Updated>
+<ConflictId>0</ConflictId>
+<Changed></Changed>
+<Comments></Comments>
+<Inactive>N</Inactive>
+<Name>PCS_Marca_conta</Name>
+<ParentInactive>N</ParentInactive>
+<ParentName>PCS Contas Desbloqueio Confianca</ParentName>
+<ProgramLanguage>SBL</ProgramLanguage>
+<ProjectLocked>N</ProjectLocked>
+<ProjectName>PCS ICS Interface</ProjectName>
+<RepositoryName>Siebel Repository</RepositoryName>
+<SalesApplicationUse></SalesApplicationUse>
+<Script>Sub PCS_Marca_conta(sIdInvoice As String, pStatus as String)
+
+	Dim oBO As BusObject
+	Dim oBC As BusComp
+
+	Set oBO = TheApplication.GetBusObject(&quot;PCS Objetos Light&quot;)
+	Set oBC = oBO.GetBusComp(&quot;PCS Account Light No Link&quot;)
+		
+	With oBC
+		.ClearToQuery
+		.SetViewMode AllView
+		.ActivateField &quot;PCS Status Desbloqueio Confianca&quot;
+		.SetSearchSpec &quot;Id&quot;, sIdInvoice
+		.ExecuteQuery
+		If .FirstRecord then
+			.SetFieldValue &quot;PCS Status Desbloqueio Confianca&quot;, pStatus
+			.WriteRecord
+		End If
+	End With
+
+	Set oBC = Nothing
+	Set oBO = Nothing
+
+End Sub</Script>
+<Sequence>4</Sequence>
+<ServiceApplicationUse></ServiceApplicationUse>
+<ToolsApplicationUse></ToolsApplicationUse>
+</DevopsRepositoryBusinessServiceScript>
+<DevopsRepositoryBusinessServiceScript>
+<Created>07/14/2009 15:54:40</Created>
+<Updated>01/06/2017 09:45:26</Updated>
+<ConflictId>0</ConflictId>
+<Changed></Changed>
+<Comments></Comments>
+<Inactive>N</Inactive>
+<Name>PCS_Processar</Name>
+<ParentInactive>N</ParentInactive>
+<ParentName>PCS Contas Desbloqueio Confianca</ParentName>
+<ProgramLanguage>SBL</ProgramLanguage>
+<ProjectLocked>N</ProjectLocked>
+<ProjectName>PCS ICS Interface</ProjectName>
+<RepositoryName>Siebel Repository</RepositoryName>
+<SalesApplicationUse></SalesApplicationUse>
+<Script>Sub PCS_Processar(oInputs As PropertySet, oOutputs As PropertySet)
+
+Dim oBOMeio 	As BusObject
+Dim oBCMeio 	As BusComp
+Dim iReg 		As Integer
+Dim sSQL 		As String
+
+Dim oBOLight 	As BusObject
+Dim oBCLight 	As BusComp
+Dim oBSSincFixo As Service
+Dim InputsFixo 	As PropertySet
+Dim OutputsFixo As PropertySet
+Dim oBOLov 		As BusObject
+Dim oBCLov 		As BusComp
+Dim iContador   As Integer
+Dim iQteMaxRes  As Integer
+Dim sOnOff      As String
+
+Dim sEtapa as String
+Dim oBS 	As Service	
+Set oBS = TheApplication.GetService(&quot;PCS Gera Log Generico&quot;)
+    
+On Error GoTo FimErro
+    
+    &apos;** ARS 10953353
+    Dim sMsgErro as String
+    If Len(oInputs.GetProperty(&quot;Object Id&quot;)) = 0 then
+		sMsgErro = &quot;Id da Conta não informado&quot;
+		GoTo FimErro
+    End If
+    
+    sIdInvoice = oInputs.GetProperty(&quot;Object Id&quot;)
+
+Theapplication.trace &quot;Trace PCS Processar 0: &quot; + oInputs.GetProperty(&quot;Object Id&quot;)
+
+Theapplication.trace &quot;Teste Uillas Processa 0: &quot; + oInputs.GetProperty(&quot;Object Id&quot;)
+	Call PCS_Marca_conta(oInputs.GetProperty(&quot;Object Id&quot;),&quot;Enviando&quot;)
+
+	&apos;** ARS 8139774
+	sErroMovel = &quot;N&quot;
+	sErroFixo  = &quot;N&quot;
+	sErroTV    = &quot;N&quot;
+	sReExec    = &quot;N&quot;
+	
+	sEtapa = &quot;0&quot;
+	iContador   = 0
+	
+	TheApplication.SetProfileAttr &quot;spName&quot;, &quot;PKE000000022235_COUNT&quot;
+	TheApplication.InvokeMethod(&quot;SearchSysPref&quot;)
+	
+	TheApplication.Trace &quot;PKE000000022235_COUNT: &quot; &amp; TheApplication.GetProfileAttr(&quot;spValue&quot;)	
+	iQteMaxRes = Int(TheApplication.GetProfileAttr(&quot;spValue&quot;))
+	
+	TheApplication.SetProfileAttr &quot;spName&quot;, &quot;PKE000000022235_ONOFF&quot;
+	TheApplication.InvokeMethod(&quot;SearchSysPref&quot;)
+	
+	TheApplication.Trace &quot;PKE000000022235_ONOFF: &quot; &amp; TheApplication.GetProfileAttr(&quot;spValue&quot;)	
+	sOnOff = TheApplication.GetProfileAttr(&quot;spValue&quot;)
+	
+	Dim oBO As BusObject
+	Dim oBC As BusComp
+
+	Set oBO = TheApplication.GetBusObject(&quot;PCS Requisicao EAI&quot;)
+	Set oBC = oBO.GetBusComp(&quot;PCS Requisicao EAI&quot;)
+		
+	With oBC
+		.ClearToQuery
+		.ActivateField &quot;PCS Status&quot;
+		.ActivateField &quot;PCS Origem Solicitacao&quot;
+		.ActivateField &quot;PCS Chave Requisicao&quot;
+		.ActivateField &quot;PCS Recebimento Requisicao&quot;
+		.ActivateField &quot;PCS Descricao&quot; 	&apos;** ERRO FIXO
+		.ActivateField &quot;PCS Evento&quot;		&apos;** ERRO MOVEL
+		.ActivateField &quot;PCS Envio Requisicao&quot; &apos;** ERRO TV
+			
+		.SetSearchSpec &quot;PCS Origem Solicitacao&quot;, &quot;&quot;
+		.SetSearchSpec &quot;PCS Status&quot;, &quot;PendenteDesblCont&quot;
+		.SetSearchSpec &quot;PCS Chave Requisicao&quot;, sIdInvoice
+		.ExecuteQuery
+		
+		If .FirstRecord &gt; 0 then
+			sExecFixo  = .GetFieldValue(&quot;PCS Descricao&quot;)
+			sExecMovel = .GetFieldValue(&quot;PCS Evento&quot;)
+			sExecTV    = .GetFieldValue(&quot;PCS Envio Requisicao&quot;)
+			sReExec    = &quot;Y&quot;
+Theapplication.trace &quot;Trace PCS Processar 2: &quot; + .GetFieldValue(&quot;PCS Descricao&quot;) +&quot;/&quot;+ .GetFieldValue(&quot;PCS Evento&quot;) +&quot;/&quot;+ .GetFieldValue(&quot;PCS Envio Requisicao&quot;)
+			sEtapa = sEtapa + &quot;;1&quot;
+		End If
+	End With
+	
+	Set oBC = Nothing
+	Set oBO = Nothing
+
+
+	If sReExec = &quot;Y&quot; then
+		If sExecMovel = &quot;Y&quot; then
+			GoTo ExecMovel
+		Elseif sExecFixo = &quot;Y&quot; then
+			GoTo ExecFixo
+		Elseif sExecTV = &quot;Y&quot; then
+			GoTo ExecTV
+		End If
+	End If
+
+
+
+ExecMovel:
+
+    Set oBOMeio = TheApplication.GetBusObject(&quot;PCS Objetos Light&quot;)
+    Set oBCMeio = oBOMeio.GetBusComp(&quot;Com Quote Solution for Query&quot;)
+    
+    
+	With oBCMeio
+		.SetViewMode AllView
+		.ActivateField &quot;Invoice Account Id&quot;
+		.ActivateField &quot;Copied&quot;
+		.ActivateField &quot;Status Code&quot;
+		.ActivateField &quot;Bloqueio Venda Remota&quot;
+		.ActivateField &quot;PCS Hotline Cobranca&quot;
+		.ActivateField &quot;PCS Susp Parc Inad&quot;
+		.ActivateField &quot;PCS Susp Tot Inad&quot;
+		.ActivateField &quot;PCS Status Desbloqueio Confianca&quot;
+		.ClearToQuery
+		
+		 sSQL = &quot;[Status Code] &lt;&gt; &apos;Deleted&apos; AND [Status Code] &lt;&gt; &apos;Inativo&apos; AND [Copied] = &apos;N&apos; AND [Invoice Account Id]= &quot; &amp; &quot;&apos;&quot; &amp; oInputs.GetProperty(&quot;Object Id&quot;) &amp; &quot;&apos;&quot;
+Theapplication.trace &quot;Trace PCS Processar 3: &quot; + sSQL
+		.SetSearchExpr sSQL
+		.ExecuteQuery 
+		iReg = .FirstRecord
+	End With
+
+	sEtapa = sEtapa + &quot;;2&quot;
+	
+	Do While iReg &lt;&gt; 0
+Theapplication.trace &quot;Trace PCS Processar 4: &quot; + oBCMeio.GetFieldValue(&quot;Id&quot;) +&quot;;&quot;+ oBCMeio.GetFieldValue(&quot;Status Code&quot;)
+		&apos;** PKE000000003681 
+		If oBCMeio.GetFieldValue(&quot;Status Code&quot;) &lt;&gt; &quot;Ativo&quot; and oBCMeio.GetFieldValue(&quot;Status Code&quot;) &lt;&gt; &quot;Suspenso&quot; and oBCMeio.GetFieldValue(&quot;Status Code&quot;) &lt;&gt; &quot;Bloqueado&quot; then 
+Theapplication.trace &quot;Trace PCS Processar 5: &quot; + oBCMeio.GetFieldValue(&quot;Id&quot;) +&quot;;&quot;+ oBCMeio.GetFieldValue(&quot;Status Code&quot;)
+			sErroMovel = &quot;Y&quot;
+
+			oInputs.SetProperty &quot;Origem&quot;, &quot;PCSLogDesblConf&quot;
+			oInputs.SetProperty &quot;Evento&quot;, &quot;PCSLogDesblConf&quot;
+			oInputs.SetProperty &quot;Id Pai&quot;, sIdInvoice
+			oInputs.SetProperty &quot;Descricao1&quot;, &quot;Erro1: &quot; + oBCMeio.GetFieldValue(&quot;Id&quot;)
+
+			oBS.InvokeMethod &quot;Gerar&quot;, oInputs, oOutputs
+	
+		end if
+		iReg = oBCMeio.NextRecord
+	Loop
+
+
+	iReg = oBCMeio.FirstRecord
+	Do While iReg &lt;&gt; 0
+		
+Theapplication.trace &quot;Trace PCS Processar 6: &quot; + oBCMeio.GetFieldValue(&quot;Id&quot;) +&quot;;&quot;+ oBCMeio.GetFieldValue(&quot;PCS Hotline Cobranca&quot;) +&quot;;&quot;+ oBCMeio.GetFieldValue(&quot;PCS Susp Parc Inad&quot;) +&quot;;&quot;+ oBCMeio.GetFieldValue(&quot;PCS Susp Tot Inad&quot;) +&quot;;&quot;+ oBCMeio.GetFieldValue(&quot;Bloqueio Venda Remota&quot;) +&quot;;&quot;+ oBCMeio.GetFieldValue(&quot;PCS Status Desbloqueio Confianca&quot;) 
+		
+		&apos;** ARS 8139774
+		If (oBCMeio.GetFieldValue(&quot;PCS Hotline Cobranca&quot;) = &quot;Y&quot; or _ 
+				oBCMeio.GetFieldValue(&quot;PCS Susp Parc Inad&quot;) = &quot;Y&quot; or _ 
+				oBCMeio.GetFieldValue(&quot;PCS Susp Tot Inad&quot;) = &quot;Y&quot;) and _
+				oBCMeio.GetFieldValue(&quot;Bloqueio Venda Remota&quot;) &lt;&gt; &quot;Y&quot; and _  
+				(Instr(oBCMeio.GetFieldValue(&quot;PCS Status Desbloqueio Confianca&quot;),&quot;Solicitado&quot;) &gt; 0 or oBCMeio.GetFieldValue(&quot;PCS Status Desbloqueio Confianca&quot;) = &quot;Erro&quot;) and _
+				(oBCMeio.GetFieldValue(&quot;Status Code&quot;) = &quot;Ativo&quot; or oBCMeio.GetFieldValue(&quot;Status Code&quot;) = &quot;Suspenso&quot;) then 
+
+Theapplication.trace &quot;Trace PCS Processar 7&quot;
+			Call PCS_Chama_Wf(oBCMeio.GetFieldValue(&quot;Id&quot;),oOutputs)
+			
+Theapplication.trace &quot;Trace PCS Processar 8: &quot; + oOutputs.GetProperty(&quot;Error Code&quot;) +&quot;;&quot;+ oOutputs.GetProperty(&quot;Error Message&quot;)
+			If Len(oOutputs.GetProperty(&quot;Error Code&quot;)) &gt; 0 then
+Theapplication.trace &quot;Trace PCS Processar 9&quot;
+				sErroMovel = &quot;Y&quot;
+
+	
+				oInputs.SetProperty &quot;Origem&quot;, &quot;PCSLogDesblConf&quot;
+				oInputs.SetProperty &quot;Evento&quot;, &quot;PCSLogDesblConf&quot;
+				oInputs.SetProperty &quot;Id Pai&quot;, sIdInvoice
+				oInputs.SetProperty &quot;Descricao1&quot;, &quot;Erro2: &quot; + oBCMeio.GetFieldValue(&quot;Id&quot;) +&quot;-&gt;&quot;+ oOutputs.GetProperty(&quot;Error Message&quot;)
+
+				oBS.InvokeMethod &quot;Gerar&quot;, oInputs, oOutputs
+
+			End If
+
+		end if
+
+		iReg = oBCMeio.NextRecord
+	Loop
+    
+&apos;sErroMovel = Inputbox(&quot;Erro no Movel?&quot;)
+
+
+ExecFixo:
+
+	sEtapa = sEtapa + &quot;;3&quot;
+
+	If sReExec = &quot;Y&quot; and sExecFixo = &quot;N&quot; then
+		GoTo ExecTV
+	End If
+
+    &apos;Ini DC 35481 - Izabel Albuquerque
+	Set oBOLight = TheApplication.GetBusObject(&quot;PCS Objetos Light&quot;)
+   	Set oBCLight = oBOLight.GetBusComp(&quot;Com Quote Item Light&quot;)
+    
+	With oBCLight
+  		.ClearToQuery
+	  	.SetViewMode AllView
+		.ActivateField &quot;Quote Id&quot;
+		.ActivateField &quot;PCS Historico Acao&quot;
+	  	.SetSearchSpec &quot;Inv Account Id&quot;, oInputs.GetProperty(&quot;Object Id&quot;)
+ 		.SetSearchSpec &quot;PCS Classe OS Plena&quot;, &quot;Fixo Convergente&quot;
+		.SetSearchSpec &quot;PCS Historico Acao&quot;, &quot;Bloqueado STC&quot; 
+		
+Theapplication.trace &quot;Trace PCS Processar 10: &quot; + .GetSearchExpr
+		.ExecuteQuery ForwardOnly
+		iReg = .FirstRecord
+	End With
+	
+	sEtapa = sEtapa + &quot;;4&quot;
+	
+	If iReg &lt;&gt; 0 Then
+Theapplication.trace &quot;Trace PCS Processar 11&quot;
+		Set oBSSincFixo = TheApplication.GetService(&quot;PCS STC Sincrona Convergente&quot;)
+	    Set InputsFixo  = TheApplication.NewPropertySet()
+    	Set OutputsFixo = TheApplication.NewPropertySet()
+		
+	    InputsFixo.SetProperty &quot;PCSAcao&quot;,&quot;DesbloqueioFixo&quot;
+    	InputsFixo.SetProperty &quot;PCSSharedBundleId&quot;, oBCLight.GetFieldValue(&quot;Quote Id&quot;)
+ 		
+	    oBSSincFixo.InvokeMethod &quot;ExecutaSincronaWorkflow&quot;, InputsFixo, OutputsFixo
+		
+Theapplication.trace &quot;Trace PCS Processar 12: &quot; + OutputsFixo.GetProperty(&quot;ReturnedAcao&quot;)
+		sEtapa = sEtapa + &quot;;5:&quot;+oBCLight.GetFieldValue(&quot;Quote Id&quot;)+&quot;;&quot;+OutputsFixo.GetProperty(&quot;ReturnedAcao&quot;)
+		If OutputsFixo.GetProperty(&quot;ReturnedAcao&quot;) = &quot;OK&quot; Then
+			Set oBOLov = TheApplication.GetBusObject(&quot;List Of Values&quot;)
+			Set oBCLov = oBOLov.GetBusComp(&quot;List Of Values&quot;)
+			
+			With oBCLov
+				.SetViewMode AllView
+ 				.ClearToQuery
+ 				
+				.ActivateField &quot;High&quot;
+				
+				.SetSearchSpec &quot;Type&quot;, &quot;PCS_ICS_ACAO_FIXO&quot;
+				.SetSearchSpec &quot;Low&quot;, &quot;DesbloqueioFixo&quot;
+ 				.SetSearchSpec &quot;Active&quot;, &quot;Y&quot;
+ 				.ExecuteQuery ForwardOnly
+ 				
+				If oBCLov.FirstRecord = 0 Then
+					GoTo ExecTV
+				End If
+
+				With oBCLight
+					.ExecuteQuery
+					.SetFieldValue &quot;PCS Historico Acao&quot;, oBCLov.GetFieldValue(&quot;High&quot;)
+					.WriteRecord
+				End With
+
+     		End With
+     	Else
+     		&apos;** ARS 8139774
+Theapplication.trace &quot;Trace PCS Processar 13: &quot; +  oInputs.GetProperty(&quot;Object Id&quot;) +&quot;;&quot;+ OutputsFixo.GetProperty(&quot;ReturnedAcao&quot;)
+			sErroFixo = &quot;Y&quot; 
+	
+			oInputs.SetProperty &quot;Origem&quot;, &quot;PCSLogDesblConf&quot;
+			oInputs.SetProperty &quot;Evento&quot;, &quot;PCSLogDesblConf&quot;
+			oInputs.SetProperty &quot;Id Pai&quot;, sIdInvoice
+			oInputs.SetProperty &quot;Descricao1&quot;, &quot;Erro3: &quot; + OutputsFixo.GetProperty(&quot;ReturnedAcao&quot;)
+
+			oBS.InvokeMethod &quot;Gerar&quot;, oInputs, oOutputs
+     	End If
+     	&apos;Fim DC 35481 - RMN
+	End If
+
+ExecTV:
+
+Theapplication.trace &quot;Trace PCS Processar 14&quot;
+	If sReExec = &quot;Y&quot; and sExecTV = &quot;N&quot; then
+		GoTo PulaTV
+	End If
+
+
+	&apos;Dim oBOTV 	As BusObject
+	&apos;Dim oBCTV 	As BusComp
+
+	Set oBO = TheApplication.GetBusObject(&quot;PCS TV Object&quot;)
+	Set oBC = oBO.GetBusComp(&quot;PCS TV BC&quot;)
+
+	sEtapa = sEtapa + &quot;;6&quot;
+	
+	With oBC
+		.SetViewMode AllView
+		.ClearToQuery
+		.ActivateField &quot;PCS SB Id&quot;
+		.ActivateField &quot;Status Code&quot;
+		.ActivateField &quot;Action&quot;
+		.ActivateField &quot;PCS Historico Acao&quot;
+		.SetSearchSpec &quot;Invoice Account Id&quot;, sIdInvoice
+		.SetSearchSpec &quot;PCS Historico Acao&quot;, &quot;Bloqueado*&quot;
+		.SetSearchSpec &quot;PCS Classe OS Plena&quot;, &quot;Oi TV&quot; 
+		.ExecuteQuery 
+		
+		If .FirstRecord &gt; 0 then
+			Theapplication.trace &quot;Trace PCS Processar 15&quot;
+			
+			Dim Inputs As PropertySet
+			Dim Outputs As PropertySet
+				
+			Set Inputs  = TheApplication.NewPropertySet()			
+			Set Outputs  = TheApplication.NewPropertySet()
+			
+			If sOnOff = &quot;Y&quot; Then 		
+			
+				Dim svc     As Service
+			
+			
+				TheApplication.SetProfileAttr &quot;lovValue&quot;, TheApplication.LoginName
+				TheApplication.SetProfileAttr &quot;lovType&quot; , &quot;PCS_LISTA_USUARIO_SERVIDOR&quot; 
+				TheApplication.InvokeMethod(&quot;SearchLOV&quot;)	
+	
+				If Len(TheApplication.GetProfileAttr(&quot;lovName&quot;)) &lt;&gt; 0 Then 
+					Set svc = TheApplication.GetService(&quot;EAI Business Integration Manager (Server Request)&quot;)
+				Else
+					Set svc = TheApplication.GetService(&quot;Workflow Process Manager&quot;)
+				End If
+
+			
+				&apos;** PKE000000017351
+				Set oBOLov	=	TheApplication.GetBusObject(&quot;List Of Values&quot;)
+				Set oBCLov	=	oBOLov.GetBusComp(&quot;List Of Values&quot;)
+
+				With oBCLov
+
+					.ClearToQuery
+					.SetViewMode AllView
+					.ActivateField &quot;Description&quot;
+					.ActivateField &quot;Value&quot;
+					.ActivateField &quot;High&quot;
+					.SetSearchSpec &quot;Active&quot;, &quot;Y&quot;
+					.SetSearchSpec &quot;Type&quot;, &quot;PCS_ICS_ACAO_TV&quot;
+					.SetSearchSpec &quot;Name&quot;, &quot;TV - Desbloqueio de sinal P&quot;
+
+					.ExecuteQuery ForwardOnly
+	
+					If .FirstRecord = 0 then
+						TheApplication.Trace &quot;Trace PCS Processar 15.1&quot;
+						GoTo PulaTV
+					End If
+	
+				End With
+			
+				Inputs.SetProperty &quot;Evento&quot;, oBCLov.GetFieldValue(&quot;Value&quot;)
+				Inputs.SetProperty &quot;RowId&quot;, .GetFieldValue(&quot;PCS SB Id&quot;)
+				Inputs.SetProperty &quot;ProcessName&quot;, &quot;PCS #P - Enviar Oi TV&quot;
+			
+				svc.InvokeMethod &quot;RunProcess&quot;, Inputs, Outputs
+			Else
+			
+				Inputs.SetProperty &quot;RowId&quot;, .GetFieldValue(&quot;PCS SB Id&quot;)
+				iContador = iContador + 1   
+				Call subInterfaceTV(Inputs , Outputs ,.GetFieldValue(&quot;PCS SB Id&quot;) , sIdInvoice, iContador , iQteMaxRes)
+				
+			End If
+			
+				Theapplication.trace &quot;Trace PCS Processar 16: &quot; + Outputs.GetProperty(&quot;Error Code&quot;) +&quot;-&quot;+ Outputs.GetProperty(&quot;Error Message&quot;)
+				sEtapa = sEtapa + &quot;;7:&quot;+.GetFieldValue(&quot;PCS SB Id&quot;)+&quot;;&quot;+Outputs.GetProperty(&quot;Error Code&quot;)
+			If Outputs.GetProperty(&quot;Error Code&quot;) &lt;&gt; &quot;0&quot; then
+				sErroTV = &quot;Y&quot; 
+	
+				oInputs.SetProperty &quot;Origem&quot;, &quot;PCSLogDesblConf&quot;
+				oInputs.SetProperty &quot;Evento&quot;, &quot;PCSLogDesblConf&quot;
+				oInputs.SetProperty &quot;Id Pai&quot;, sIdInvoice
+				oInputs.SetProperty &quot;Descricao1&quot;, &quot;Erro4: &quot; + Outputs.GetProperty(&quot;Error Code&quot;) +&quot;-&quot;+ Outputs.GetProperty(&quot;Error Message&quot;)
+
+				oBS.InvokeMethod &quot;Gerar&quot;, oInputs, oOutputs
+
+				&apos;** Atualizar TV com erro!!
+				oBC.SetFieldValue &quot;Status Code&quot;, &quot;Erro&quot;
+				oBC.SetFieldValue &quot;Action&quot;, &quot;Desbloquear&quot;
+				oBC.WriteRecord
+	
+TheApplication.Trace &quot;Trace PCS Processar 16.1&quot;
+			Else
+				&apos;** Atualizar TV de acordo com acao!!
+				oBC.SetFieldValue &quot;Status Code&quot;, oBCLov.GetFieldValue(&quot;High&quot;)
+				oBC.SetFieldValue &quot;PCS Historico Acao&quot;, oBCLov.GetFieldValue(&quot;Description&quot;)
+				oBC.WriteRecord
+TheApplication.Trace &quot;Trace PCS Processar 16.2&quot;
+			
+			End If
+			
+			Set Inputs  = Nothing
+			Set Outputs  = Nothing
+			set svc = Nothing
+			
+		End If
+		
+	End With
+
+	Set oBC = Nothing
+	Set oBO = Nothing
+
+PulaTV:
+
+	&apos;** ARS 8139774
+Theapplication.trace &quot;Trace PCS Processar 17: &quot; +  sReExec +&quot;/&quot;+ sErroMovel +&quot;/&quot;+ sErroFixo +&quot;/&quot;+ sExecTV +&quot;/&quot;+ oInputs.GetProperty(&quot;Object Id&quot;)
+	sEtapa = sEtapa + &quot;;8&quot;
+	Call PCS_Cria_Controle(oInputs.GetProperty(&quot;Object Id&quot;), sErroMovel, sErroFixo, sErroTV, sReExec)
+	
+	oInputs.SetProperty &quot;Origem&quot;, &quot;PCSLogDesblConf&quot;
+	oInputs.SetProperty &quot;Evento&quot;, &quot;PCSLogDesblConf&quot;
+	oInputs.SetProperty &quot;Id Pai&quot;, sIdInvoice
+	oInputs.SetProperty &quot;Descricao1&quot;, &quot;Final: &quot; + sEtapa
+
+	oBS.InvokeMethod &quot;Gerar&quot;, oInputs, oOutputs
+
+	GoTo Final
+	
+FimErro:
+    oOutputs.SetProperty &quot;Error Code&quot;, &quot;-1&quot;
+    &apos;** ARS 10953353
+    oOutputs.SetProperty &quot;Error Message&quot;, sMsgErro +&quot;/&quot;+ Error(Err)
+Theapplication.trace &quot;Trace PCS Processar Erro: &quot; + Error(Err)
+
+	
+	oInputs.SetProperty &quot;Origem&quot;, &quot;PCSLogDesblConf&quot;
+	oInputs.SetProperty &quot;Evento&quot;, &quot;PCSLogDesblConf&quot;
+	oInputs.SetProperty &quot;Id Pai&quot;, sIdInvoice
+    &apos;** ARS 10953353
+	oInputs.SetProperty &quot;Descricao1&quot;, &quot;Erro5: &quot; + sMsgErro +&quot;/&quot;+ Error(Err)
+
+	oBS.InvokeMethod &quot;Gerar&quot;, oInputs, oOutputs
+
+Final: 
+    Set oBCMeio = Nothing
+    Set oBOMeio = Nothing
+    
+ 	Set InputsFixo  = Nothing
+	Set OutputsFixo = Nothing
+	Set oBSSincFixo = Nothing
+	
+	Set oBCLight = Nothing
+	Set oBOLight = Nothing
+	
+	Set oBCLov = Nothing
+	Set oBOLov = Nothing
+
+	Set oBS      = Nothing
+
+End Sub</Script>
+<Sequence>5</Sequence>
+<ServiceApplicationUse></ServiceApplicationUse>
+<ToolsApplicationUse></ToolsApplicationUse>
+</DevopsRepositoryBusinessServiceScript>
+<DevopsRepositoryBusinessServiceScript>
+<Created>07/14/2009 15:26:00</Created>
+<Updated>01/06/2017 09:45:26</Updated>
+<ConflictId>0</ConflictId>
+<Changed></Changed>
+<Comments></Comments>
+<Inactive>N</Inactive>
+<Name>Service_PreInvokeMethod</Name>
+<ParentInactive>N</ParentInactive>
+<ParentName>PCS Contas Desbloqueio Confianca</ParentName>
+<ProgramLanguage>SBL</ProgramLanguage>
+<ProjectLocked>N</ProjectLocked>
+<ProjectName>PCS ICS Interface</ProjectName>
+<RepositoryName>Siebel Repository</RepositoryName>
+<SalesApplicationUse></SalesApplicationUse>
+<Script>Function Service_PreInvokeMethod (MethodName As String, Inputs As PropertySet, Outputs As PropertySet) As Integer
+
+ 
+  Service_PreInvokeMethod = CancelOperation	 
+  
+  Select Case MethodName
+	
+	Case &quot;Executa&quot;
+
+      Outputs.SetProperty &quot;Error Code&quot;,&quot;0&quot;
+      Outputs.SetProperty &quot;Error Message&quot;,&quot;&quot;      
+
+       Call PCS_Processar(Inputs, Outputs)
+	Case Else
+		Service_PreInvokeMethod = ContinueOperation
+	End Select
+  
+End Function</Script>
+<Sequence>7</Sequence>
+<ServiceApplicationUse></ServiceApplicationUse>
+<ToolsApplicationUse></ToolsApplicationUse>
+</DevopsRepositoryBusinessServiceScript>
+<DevopsRepositoryBusinessServiceScript>
+<Created>12/19/2016 20:24:30</Created>
+<Updated>12/19/2016 20:24:41</Updated>
+<ConflictId>0</ConflictId>
+<Changed></Changed>
+<Comments></Comments>
+<Inactive>N</Inactive>
+<Name>subInterfaceTV</Name>
+<ParentInactive>N</ParentInactive>
+<ParentName>PCS Contas Desbloqueio Confianca</ParentName>
+<ProgramLanguage>SBL</ProgramLanguage>
+<ProjectLocked>N</ProjectLocked>
+<ProjectName>PCS ICS Interface</ProjectName>
+<RepositoryName>Siebel Repository</RepositoryName>
+<SalesApplicationUse></SalesApplicationUse>
+<Script>Sub subInterfaceTV(Inputs As PropertySet, Outputs As PropertySet,sIdSHB As String, sIdInvoice as String , iContador as Integer, iQteMaxRes as Integer)
+Dim oBOLov 	 As BusObject
+	Dim oBCLov 	 As BusComp
+	Dim oInputs  As PropertySet
+	Dim oOutputs As PropertySet
+	Dim svc      As Service
+	Dim oBS 	 As Service	
+	
+	
+	On Error GoTo FimErro
+
+	Set oInputs   = TheApplication.NewPropertySet()
+	Set oOutputs  = TheApplication.NewPropertySet()
+	Set oBS = TheApplication.GetService(&quot;PCS Gera Log Generico&quot;)
+	
+				
+	Theapplication.trace &quot;Trace subInterfaceTV Qdte Erro: &quot; + str(iContator)		
+	TheApplication.SetProfileAttr &quot;lovValue&quot;, TheApplication.LoginName
+	TheApplication.SetProfileAttr &quot;lovType&quot; , &quot;PCS_LISTA_USUARIO_SERVIDOR&quot; 
+	TheApplication.InvokeMethod(&quot;SearchLOV&quot;)
+	
+	If Len(TheApplication.GetProfileAttr(&quot;lovName&quot;)) &lt;&gt; 0 Then 
+		Set svc = TheApplication.GetService(&quot;EAI Business Integration Manager (Server Request)&quot;)
+	Else
+		Set svc = TheApplication.GetService(&quot;Workflow Process Manager&quot;)
+	End If
+
+			
+	&apos;** PKE000000017351
+	Set oBOLov	=	TheApplication.GetBusObject(&quot;List Of Values&quot;)
+	Set oBCLov	=	oBOLov.GetBusComp(&quot;List Of Values&quot;)
+
+	With oBCLov
+
+		.ClearToQuery
+		.SetViewMode AllView
+		.ActivateField &quot;Description&quot;
+		.ActivateField &quot;Value&quot;
+		.ActivateField &quot;High&quot;
+		.SetSearchSpec &quot;Active&quot;, &quot;Y&quot;
+		.SetSearchSpec &quot;Type&quot;, &quot;PCS_ICS_ACAO_TV&quot;
+		.SetSearchSpec &quot;Name&quot;, &quot;TV - Desbloqueio de sinal P&quot;
+
+		.ExecuteQuery ForwardOnly
+	
+		If .FirstRecord = 0 then
+			TheApplication.Trace &quot;Trace PCS Processar 15.1&quot;
+				GoTo Final
+			End If
+	
+		End With
+			
+		Inputs.SetProperty &quot;Evento&quot;, oBCLov.GetFieldValue(&quot;Value&quot;)
+		Inputs.SetProperty &quot;RowId&quot;, sIdSHB
+		Inputs.SetProperty &quot;ProcessName&quot;, &quot;PCS #P - Enviar Oi TV&quot;
+			
+		svc.InvokeMethod &quot;RunProcess&quot;, Inputs, Outputs
+			
+		Theapplication.trace &quot;Trace PCS Processar 16: &quot; + Outputs.GetProperty(&quot;Error Code&quot;) +&quot;-&quot;+ Outputs.GetProperty(&quot;Error Message&quot;)
+		
+GoTo Final
+				
+FimErro:
+    oOutputs.SetProperty &quot;Error Code&quot;, &quot;-1&quot;
+    &apos;** ARS 10953353
+    oOutputs.SetProperty &quot;Error Message&quot;, sMsgErro +&quot;/&quot;+ Error(Err)
+	Theapplication.trace &quot;Trace PCS Processar Erro: &quot; + Error(Err)
+	
+	TheApplication.Trace &quot;Trace subInterfaceTV : &quot; + str(Err) +&quot;/&quot;+ str(iContador) +&quot;/&quot;+ str(iQteMaxRes)
+
+	If iContador &lt; iQteMaxRes Then
+
+		Call subInterfaceTV(Inputs , Outputs ,sIdSHB , sIdInvoice, iContador+1 , iQteMaxRes)
+		
+	Else
+	
+		Theapplication.trace &quot;Trace subInterfaceTV Log: &quot; + str(iContador)
+	
+		oInputs.SetProperty &quot;Origem&quot;, &quot;PCSLogDesblConf&quot;
+		oInputs.SetProperty &quot;Evento&quot;, &quot;PCSLogDesblConf&quot;
+		oInputs.SetProperty &quot;Id Pai&quot;, sIdInvoice
+    	&apos;** ARS 10953353
+		oInputs.SetProperty &quot;Descricao1&quot;, &quot;Erro5: &quot; + sMsgErro +&quot;/&quot;+ Error(Err)
+
+		oBS.InvokeMethod &quot;Gerar&quot;, oInputs, oOutputs
+	End If
+		
+Final:		
+			
+		Set oInputs  = Nothing
+		Set oOutputs  = Nothing
+		Set oBCLov  = Nothing
+		Set oBOLov  = Nothing
+		Set svc = Nothing
+		Set oBS = Nothing
+End Sub</Script>
+<Sequence>6</Sequence>
+<ServiceApplicationUse></ServiceApplicationUse>
+<ToolsApplicationUse></ToolsApplicationUse>
+</DevopsRepositoryBusinessServiceScript>
+</ListOfDevopsRepositoryBusinessServiceScript>
+<ListOfDevopsRepositoryBusinessServiceSubsystem></ListOfDevopsRepositoryBusinessServiceSubsystem>
+<ListOfDevopsRepositoryBusinessServiceUserProp></ListOfDevopsRepositoryBusinessServiceUserProp>
+</DevopsRepositoryBusinessService>
+</ListOfDevopsRepositoryBusinessService>
+</SiebelMessage>
