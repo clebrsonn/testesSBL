@@ -5,7 +5,7 @@
 <ListOfDevopsRepositoryBusinessService>
 <DevopsRepositoryBusinessService>
 <Created>07/14/2009 15:23:21</Created>
-<Updated>01/06/2017 09:45:26</Updated>
+<Updated>12/01/2017 15:01:06</Updated>
 <ConflictId>0</ConflictId>
 <Cache>N</Cache>
 <Changed></Changed>
@@ -15,7 +15,7 @@
 <Hidden>N</Hidden>
 <Inactive>N</Inactive>
 <Name>PCS Contas Desbloqueio Confianca</Name>
-<ProjectLocked>N</ProjectLocked>
+<ProjectLocked>Y</ProjectLocked>
 <ProjectName>PCS ICS Interface</ProjectName>
 <RepositoryName>Siebel Repository</RepositoryName>
 <SalesApplicationUse></SalesApplicationUse>
@@ -35,7 +35,7 @@
 <Name>Executa</Name>
 <ParentInactive>N</ParentInactive>
 <ParentName>PCS Contas Desbloqueio Confianca</ParentName>
-<ProjectLocked>N</ProjectLocked>
+<ProjectLocked>Y</ProjectLocked>
 <ProjectName>PCS ICS Interface</ProjectName>
 <RepositoryName>Siebel Repository</RepositoryName>
 <ListOfDevopsRepositoryBusinessServiceMethodArg>
@@ -59,7 +59,7 @@
 <PickField></PickField>
 <PickListBuscompName></PickListBuscompName>
 <Picklist></Picklist>
-<ProjectLocked>N</ProjectLocked>
+<ProjectLocked>Y</ProjectLocked>
 <ProjectName>PCS ICS Interface</ProjectName>
 <RepositoryName>Siebel Repository</RepositoryName>
 <StorageType>Property</StorageType>
@@ -85,7 +85,7 @@
 <PickField></PickField>
 <PickListBuscompName></PickListBuscompName>
 <Picklist></Picklist>
-<ProjectLocked>N</ProjectLocked>
+<ProjectLocked>Y</ProjectLocked>
 <ProjectName>PCS ICS Interface</ProjectName>
 <RepositoryName>Siebel Repository</RepositoryName>
 <StorageType>Property</StorageType>
@@ -97,7 +97,7 @@
 <ListOfDevopsRepositoryBusinessServiceScript>
 <DevopsRepositoryBusinessServiceScript>
 <Created>07/14/2009 15:36:24</Created>
-<Updated>01/06/2017 09:45:26</Updated>
+<Updated>04/27/2017 11:20:05</Updated>
 <ConflictId>0</ConflictId>
 <Changed></Changed>
 <Comments></Comments>
@@ -106,7 +106,7 @@
 <ParentInactive>N</ParentInactive>
 <ParentName>PCS Contas Desbloqueio Confianca</ParentName>
 <ProgramLanguage>SBL</ProgramLanguage>
-<ProjectLocked>N</ProjectLocked>
+<ProjectLocked>Y</ProjectLocked>
 <ProjectName>PCS ICS Interface</ProjectName>
 <RepositoryName>Siebel Repository</RepositoryName>
 <SalesApplicationUse></SalesApplicationUse>
@@ -114,7 +114,7 @@
 Declare Sub PCS_Chama_Wf(sIdMeio As String, pOutputs As PropertySet)
 Declare Sub PCS_Marca_conta(sIdInvoice As String, pStatus as String)
 Declare Sub PCS_Cria_Controle(sIdInvoice As String, pErroMovel as String, pErroFixo as String, pErroTV as String, pReExec as String)
-Declare Sub subInterfaceTV(Inputs As PropertySet, Outputs As PropertySet,sIdSHB As String, sIdInvoice as String , iContador as Integer, iQteMaxRes as Integer)</Script>
+Declare Sub subInterfaceTV(Inputs As PropertySet, Outputs As PropertySet,sIdSHB As String, sIdInvoice as String , iContador as Integer, iQteMaxRes as Integer, sEvento As String)</Script>
 <Sequence>1</Sequence>
 <ServiceApplicationUse></ServiceApplicationUse>
 <ToolsApplicationUse></ToolsApplicationUse>
@@ -130,7 +130,7 @@ Declare Sub subInterfaceTV(Inputs As PropertySet, Outputs As PropertySet,sIdSHB 
 <ParentInactive>N</ParentInactive>
 <ParentName>PCS Contas Desbloqueio Confianca</ParentName>
 <ProgramLanguage>SBL</ProgramLanguage>
-<ProjectLocked>N</ProjectLocked>
+<ProjectLocked>Y</ProjectLocked>
 <ProjectName>PCS ICS Interface</ProjectName>
 <RepositoryName>Siebel Repository</RepositoryName>
 <SalesApplicationUse></SalesApplicationUse>
@@ -170,7 +170,7 @@ End Sub</Script>
 <ParentInactive>N</ParentInactive>
 <ParentName>PCS Contas Desbloqueio Confianca</ParentName>
 <ProgramLanguage>SBL</ProgramLanguage>
-<ProjectLocked>N</ProjectLocked>
+<ProjectLocked>Y</ProjectLocked>
 <ProjectName>PCS ICS Interface</ProjectName>
 <RepositoryName>Siebel Repository</RepositoryName>
 <SalesApplicationUse></SalesApplicationUse>
@@ -282,7 +282,7 @@ End Sub</Script>
 <ParentInactive>N</ParentInactive>
 <ParentName>PCS Contas Desbloqueio Confianca</ParentName>
 <ProgramLanguage>SBL</ProgramLanguage>
-<ProjectLocked>N</ProjectLocked>
+<ProjectLocked>Y</ProjectLocked>
 <ProjectName>PCS ICS Interface</ProjectName>
 <RepositoryName>Siebel Repository</RepositoryName>
 <SalesApplicationUse></SalesApplicationUse>
@@ -316,7 +316,7 @@ End Sub</Script>
 </DevopsRepositoryBusinessServiceScript>
 <DevopsRepositoryBusinessServiceScript>
 <Created>07/14/2009 15:54:40</Created>
-<Updated>01/06/2017 09:45:26</Updated>
+<Updated>12/01/2017 15:01:06</Updated>
 <ConflictId>0</ConflictId>
 <Changed></Changed>
 <Comments></Comments>
@@ -325,7 +325,7 @@ End Sub</Script>
 <ParentInactive>N</ParentInactive>
 <ParentName>PCS Contas Desbloqueio Confianca</ParentName>
 <ProgramLanguage>SBL</ProgramLanguage>
-<ProjectLocked>N</ProjectLocked>
+<ProjectLocked>Y</ProjectLocked>
 <ProjectName>PCS ICS Interface</ProjectName>
 <RepositoryName>Siebel Repository</RepositoryName>
 <SalesApplicationUse></SalesApplicationUse>
@@ -625,6 +625,7 @@ Theapplication.trace &quot;Trace PCS Processar 14&quot;
 		.ActivateField &quot;Status Code&quot;
 		.ActivateField &quot;Action&quot;
 		.ActivateField &quot;PCS Historico Acao&quot;
+                .ActivateField &quot;Oi Ind Sus Parcial TV&quot; &apos;PRJ16537
 		.SetSearchSpec &quot;Invoice Account Id&quot;, sIdInvoice
 		.SetSearchSpec &quot;PCS Historico Acao&quot;, &quot;Bloqueado*&quot;
 		.SetSearchSpec &quot;PCS Classe OS Plena&quot;, &quot;Oi TV&quot; 
@@ -637,47 +638,46 @@ Theapplication.trace &quot;Trace PCS Processar 14&quot;
 			Dim Outputs As PropertySet
 				
 			Set Inputs  = TheApplication.NewPropertySet()			
-			Set Outputs  = TheApplication.NewPropertySet()
+			Set Outputs  = TheApplication.NewPropertySet()		
 			
-			If sOnOff = &quot;Y&quot; Then 		
+			Dim svc     As Service		
 			
-				Dim svc     As Service
-			
-			
-				TheApplication.SetProfileAttr &quot;lovValue&quot;, TheApplication.LoginName
-				TheApplication.SetProfileAttr &quot;lovType&quot; , &quot;PCS_LISTA_USUARIO_SERVIDOR&quot; 
-				TheApplication.InvokeMethod(&quot;SearchLOV&quot;)	
+			TheApplication.SetProfileAttr &quot;lovValue&quot;, TheApplication.LoginName
+			TheApplication.SetProfileAttr &quot;lovType&quot; , &quot;PCS_LISTA_USUARIO_SERVIDOR&quot; 
+			TheApplication.InvokeMethod(&quot;SearchLOV&quot;)	
 	
-				If Len(TheApplication.GetProfileAttr(&quot;lovName&quot;)) &lt;&gt; 0 Then 
-					Set svc = TheApplication.GetService(&quot;EAI Business Integration Manager (Server Request)&quot;)
-				Else
-					Set svc = TheApplication.GetService(&quot;Workflow Process Manager&quot;)
+			If Len(TheApplication.GetProfileAttr(&quot;lovName&quot;)) &lt;&gt; 0 Then 
+				Set svc = TheApplication.GetService(&quot;EAI Business Integration Manager (Server Request)&quot;)
+			Else
+				Set svc = TheApplication.GetService(&quot;Workflow Process Manager&quot;)
+			End If
+
+			
+			&apos;** PKE000000017351
+			Set oBOLov	=	TheApplication.GetBusObject(&quot;List Of Values&quot;)
+			Set oBCLov	=	oBOLov.GetBusComp(&quot;List Of Values&quot;)
+
+			With oBCLov
+
+				.ClearToQuery
+				.SetViewMode AllView
+				.ActivateField &quot;Description&quot;
+				.ActivateField &quot;Value&quot;
+				.ActivateField &quot;High&quot;
+				.SetSearchSpec &quot;Active&quot;, &quot;Y&quot;
+				.SetSearchSpec &quot;Type&quot;, &quot;PCS_ICS_ACAO_TV&quot;
+				.SetSearchSpec &quot;Name&quot;, &quot;TV - Desbloqueio de sinal P&quot;
+
+				.ExecuteQuery ForwardOnly
+	
+				If .FirstRecord = 0 then
+					TheApplication.Trace &quot;Trace PCS Processar 15.1&quot;
+					GoTo PulaTV
 				End If
-
+	
+			End With
 			
-				&apos;** PKE000000017351
-				Set oBOLov	=	TheApplication.GetBusObject(&quot;List Of Values&quot;)
-				Set oBCLov	=	oBOLov.GetBusComp(&quot;List Of Values&quot;)
-
-				With oBCLov
-
-					.ClearToQuery
-					.SetViewMode AllView
-					.ActivateField &quot;Description&quot;
-					.ActivateField &quot;Value&quot;
-					.ActivateField &quot;High&quot;
-					.SetSearchSpec &quot;Active&quot;, &quot;Y&quot;
-					.SetSearchSpec &quot;Type&quot;, &quot;PCS_ICS_ACAO_TV&quot;
-					.SetSearchSpec &quot;Name&quot;, &quot;TV - Desbloqueio de sinal P&quot;
-
-					.ExecuteQuery ForwardOnly
-	
-					If .FirstRecord = 0 then
-						TheApplication.Trace &quot;Trace PCS Processar 15.1&quot;
-						GoTo PulaTV
-					End If
-	
-				End With
+			If sOnOff = &quot;Y&quot; Then
 			
 				Inputs.SetProperty &quot;Evento&quot;, oBCLov.GetFieldValue(&quot;Value&quot;)
 				Inputs.SetProperty &quot;RowId&quot;, .GetFieldValue(&quot;PCS SB Id&quot;)
@@ -688,13 +688,13 @@ Theapplication.trace &quot;Trace PCS Processar 14&quot;
 			
 				Inputs.SetProperty &quot;RowId&quot;, .GetFieldValue(&quot;PCS SB Id&quot;)
 				iContador = iContador + 1   
-				Call subInterfaceTV(Inputs , Outputs ,.GetFieldValue(&quot;PCS SB Id&quot;) , sIdInvoice, iContador , iQteMaxRes)
+				Call subInterfaceTV(Inputs, Outputs, .GetFieldValue(&quot;PCS SB Id&quot;), sIdInvoice, iContador, iQteMaxRes, oBCLov.GetFieldValue(&quot;Value&quot;))
 				
 			End If
 			
 				Theapplication.trace &quot;Trace PCS Processar 16: &quot; + Outputs.GetProperty(&quot;Error Code&quot;) +&quot;-&quot;+ Outputs.GetProperty(&quot;Error Message&quot;)
 				sEtapa = sEtapa + &quot;;7:&quot;+.GetFieldValue(&quot;PCS SB Id&quot;)+&quot;;&quot;+Outputs.GetProperty(&quot;Error Code&quot;)
-			If Outputs.GetProperty(&quot;Error Code&quot;) &lt;&gt; &quot;0&quot; then
+			If Outputs.GetProperty(&quot;Error Code&quot;) &lt;&gt; &quot;0&quot; Or Outputs.GetProperty(&quot;Error Code SOA&quot;) &lt;&gt; &quot;0&quot; then
 				sErroTV = &quot;Y&quot; 
 	
 				oInputs.SetProperty &quot;Origem&quot;, &quot;PCSLogDesblConf&quot;
@@ -714,6 +714,7 @@ TheApplication.Trace &quot;Trace PCS Processar 16.1&quot;
 				&apos;** Atualizar TV de acordo com acao!!
 				oBC.SetFieldValue &quot;Status Code&quot;, oBCLov.GetFieldValue(&quot;High&quot;)
 				oBC.SetFieldValue &quot;PCS Historico Acao&quot;, oBCLov.GetFieldValue(&quot;Description&quot;)
+                                oBC.SetFieldValue &quot;Oi Ind Sus Parcial TV&quot;,&quot;N&quot; &apos;PRJ16537
 				oBC.WriteRecord
 TheApplication.Trace &quot;Trace PCS Processar 16.2&quot;
 			
@@ -776,7 +777,6 @@ Final:
 	Set oBOLov = Nothing
 
 	Set oBS      = Nothing
-
 End Sub</Script>
 <Sequence>5</Sequence>
 <ServiceApplicationUse></ServiceApplicationUse>
@@ -793,7 +793,7 @@ End Sub</Script>
 <ParentInactive>N</ParentInactive>
 <ParentName>PCS Contas Desbloqueio Confianca</ParentName>
 <ProgramLanguage>SBL</ProgramLanguage>
-<ProjectLocked>N</ProjectLocked>
+<ProjectLocked>Y</ProjectLocked>
 <ProjectName>PCS ICS Interface</ProjectName>
 <RepositoryName>Siebel Repository</RepositoryName>
 <SalesApplicationUse></SalesApplicationUse>
@@ -821,7 +821,7 @@ End Function</Script>
 </DevopsRepositoryBusinessServiceScript>
 <DevopsRepositoryBusinessServiceScript>
 <Created>12/19/2016 20:24:30</Created>
-<Updated>12/19/2016 20:24:41</Updated>
+<Updated>07/24/2017 16:35:13</Updated>
 <ConflictId>0</ConflictId>
 <Changed></Changed>
 <Comments></Comments>
@@ -830,13 +830,12 @@ End Function</Script>
 <ParentInactive>N</ParentInactive>
 <ParentName>PCS Contas Desbloqueio Confianca</ParentName>
 <ProgramLanguage>SBL</ProgramLanguage>
-<ProjectLocked>N</ProjectLocked>
+<ProjectLocked>Y</ProjectLocked>
 <ProjectName>PCS ICS Interface</ProjectName>
 <RepositoryName>Siebel Repository</RepositoryName>
 <SalesApplicationUse></SalesApplicationUse>
-<Script>Sub subInterfaceTV(Inputs As PropertySet, Outputs As PropertySet,sIdSHB As String, sIdInvoice as String , iContador as Integer, iQteMaxRes as Integer)
-Dim oBOLov 	 As BusObject
-	Dim oBCLov 	 As BusComp
+<Script>Sub subInterfaceTV(Inputs As PropertySet, Outputs As PropertySet,sIdSHB As String, sIdInvoice as String , iContador as Integer, iQteMaxRes as Integer, sEvento as String)
+	
 	Dim oInputs  As PropertySet
 	Dim oOutputs As PropertySet
 	Dim svc      As Service
@@ -860,39 +859,14 @@ Dim oBOLov 	 As BusObject
 	Else
 		Set svc = TheApplication.GetService(&quot;Workflow Process Manager&quot;)
 	End If
-
 			
-	&apos;** PKE000000017351
-	Set oBOLov	=	TheApplication.GetBusObject(&quot;List Of Values&quot;)
-	Set oBCLov	=	oBOLov.GetBusComp(&quot;List Of Values&quot;)
-
-	With oBCLov
-
-		.ClearToQuery
-		.SetViewMode AllView
-		.ActivateField &quot;Description&quot;
-		.ActivateField &quot;Value&quot;
-		.ActivateField &quot;High&quot;
-		.SetSearchSpec &quot;Active&quot;, &quot;Y&quot;
-		.SetSearchSpec &quot;Type&quot;, &quot;PCS_ICS_ACAO_TV&quot;
-		.SetSearchSpec &quot;Name&quot;, &quot;TV - Desbloqueio de sinal P&quot;
-
-		.ExecuteQuery ForwardOnly
-	
-		If .FirstRecord = 0 then
-			TheApplication.Trace &quot;Trace PCS Processar 15.1&quot;
-				GoTo Final
-			End If
-	
-		End With
+	Inputs.SetProperty &quot;Evento&quot;, sEvento
+	Inputs.SetProperty &quot;RowId&quot;, sIdSHB
+	Inputs.SetProperty &quot;ProcessName&quot;, &quot;PCS #P - Enviar Oi TV&quot;
 			
-		Inputs.SetProperty &quot;Evento&quot;, oBCLov.GetFieldValue(&quot;Value&quot;)
-		Inputs.SetProperty &quot;RowId&quot;, sIdSHB
-		Inputs.SetProperty &quot;ProcessName&quot;, &quot;PCS #P - Enviar Oi TV&quot;
+	svc.InvokeMethod &quot;RunProcess&quot;, Inputs, Outputs
 			
-		svc.InvokeMethod &quot;RunProcess&quot;, Inputs, Outputs
-			
-		Theapplication.trace &quot;Trace PCS Processar 16: &quot; + Outputs.GetProperty(&quot;Error Code&quot;) +&quot;-&quot;+ Outputs.GetProperty(&quot;Error Message&quot;)
+	Theapplication.trace &quot;Trace PCS Processar 16: &quot; + Outputs.GetProperty(&quot;Error Code&quot;) +&quot;-&quot;+ Outputs.GetProperty(&quot;Error Message&quot;)
 		
 GoTo Final
 				
@@ -906,7 +880,7 @@ FimErro:
 
 	If iContador &lt; iQteMaxRes Then
 
-		Call subInterfaceTV(Inputs , Outputs ,sIdSHB , sIdInvoice, iContador+1 , iQteMaxRes)
+		Call subInterfaceTV(Inputs , Outputs ,sIdSHB , sIdInvoice, iContador+1 , iQteMaxRes, sEvento)
 		
 	Else
 	
@@ -925,8 +899,6 @@ Final:
 			
 		Set oInputs  = Nothing
 		Set oOutputs  = Nothing
-		Set oBCLov  = Nothing
-		Set oBOLov  = Nothing
 		Set svc = Nothing
 		Set oBS = Nothing
 End Sub</Script>
